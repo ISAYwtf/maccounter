@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+/* Свойства для темных и светлых режимов */
+
+.app[data-mode="light"] {
+    --color-bg-body: #EEEEEE;
+    --color-bg-component: white;
+    --color-txt: #313131;
+    --color-main: #0E91EE;
+    --color-addition-access: #00F083;
+    --color-addition-warn: #FF9000;
+    --color-addition-err: #FF4500;
+    --color-disable: #E5E5E5;
+    --color-side: #AEAEAE;
+    --color-overlay: rgba(255, 255, 255, 0.7);
+    --color-shadow: rgba(187, 187, 187, 0.25);
+    --shadow-component: 0 10px 20px var(--color-shadow);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+    color: var(--color-txt);
+    background-color: var(--color-bg-body);
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Общие свойства */
+
+.app-wrap {
+    padding: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+span {
+    color: var(--color-main);
 }
 
-.App-link {
-  color: #61dafb;
+.txt--orange {
+    color: var(--color-addition-warn);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.txt--logo {
+    font-size: var(--size-font-logo);
+}
+
+.txt--title-small {
+    font-size: var(--size-font-title-small);
+}
+
+.component {
+    box-shadow: var(--shadow-component);
+    border-radius: var(--size-border-rad-component);
+    padding: var(--size-padding-component);
+    background-color: var(--color-bg-component);
+}
+
+/* Локальные свойства */
+
+.app section {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 0;
+}
+
+main {
+    padding: 0 var(--size-space-between-component);
 }

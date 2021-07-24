@@ -1,0 +1,9 @@
+.switcher {
+    display: flex;
+    align-items: center;
+}
+
+.switcher p {
+    margin-right: 25px;
+    font-size: 24px;
+}
