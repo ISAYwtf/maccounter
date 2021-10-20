@@ -1,7 +1,7 @@
 /* Свойства для темных и светлых режимов */
 
 .app[data-mode="light"] {
-    --color-bg-body: #EEEEEE;
+    --color-bg-body: #F5F5F5;
     --color-bg-component: white;
     --color-txt: #313131;
     --color-main: #0E91EE;
@@ -58,8 +58,4 @@ span {
     display: flex;
     padding-top: 20px;
     padding-bottom: 0;
-}
-
-main {
-    padding: 0 var(--size-space-between-component);
 }

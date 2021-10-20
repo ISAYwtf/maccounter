@@ -1,17 +1,15 @@
 import React from 'react'
 import './App.css'
-import Header from "./components/Header/Header.tsx";
+import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
+import ContentPage from "./components/ContentPage/ContentPage";
 
-const App = () =>
+const App: React.FC = () =>
     <div className="app" data-mode={"light"}>
-        <Header />
+        <Header/>
         <section className={"app-wrap"}>
-            {/*<div className={"sidebar"}>*/}
-                <Sidebar />
-            {/*</div>*/}
-            <main>
-            </main>
+            <Sidebar/>
+            <ContentPage/>
         </section>
     </div>
 

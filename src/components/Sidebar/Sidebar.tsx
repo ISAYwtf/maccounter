@@ -49,7 +49,7 @@ const addImg = () =>
     </svg>
 
 
-const Sidebar = () => {
+const Sidebar: React.FC = () => {
     const [sidebarHeight, setSidebarHeight] = useState(0)
 
     const sidebarRef = useCallback(node => {
