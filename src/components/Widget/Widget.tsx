@@ -1,13 +1,14 @@
-import React from "react"
-import styles from "./Widget.module.scss"
+import React from 'react'
+import styles from './Widget.module.scss'
 
 interface WidgetProps {
     type: string
 }
 
-const Widget: React.FC<WidgetProps> = (props) =>
+const Widget: React.FC<WidgetProps> = ({ type }) => (
     <div className={`component ${styles.container}`}>
-        <p>{props.type}</p>
+        <p>{type}</p>
     </div>
+)
 
 export default Widget
