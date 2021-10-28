@@ -18,12 +18,16 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "react",
+    "jsx": "react-jsx",
     "removeComments": true,
     "preserveSymlinks": true,
     "plugins": [
-      { "transform": "typescript-transform-paths", "afterDeclarations": true }
-    ]
+      {
+        "transform": "typescript-transform-paths",
+        "afterDeclarations": true
+      }
+    ],
+    "noEmit": true
   },
   "include": [
     "src"
