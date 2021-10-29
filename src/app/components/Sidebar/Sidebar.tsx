@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react'
+import stringParser from 'app/utils/stringParser/stringParser'
 import styles from './Sidebar.module.scss'
-import stringParser from '../../utils/stringParser/stringParser'
 
 const homeImg = () => (
     <svg width="26" height="26" viewBox="0 0 26 26" fill="var(--svg-color-fill)" xmlns="http://www.w3.org/2000/svg">

@@ -1,6 +1,6 @@
 import React from 'react'
+import Switcher from 'app/components/Switcher/Switcher'
 import styles from './HomePageSwitcher.module.css'
-import Switcher from '../Switcher/Switcher'
 
 const HomePageSwitcher: React.FC = () => (
     <div className={styles.switcher}>
