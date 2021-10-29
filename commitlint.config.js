@@ -1,10 +1,10 @@
-import type { UserConfig } from '@commitlint/types'
-import lerna from './lerna.json'
+// eslint-disable-next-line
+const lerna = require('./lerna.json')
 
 const typesFromJson = lerna.command.version.changelogPreset.types
 const types = typesFromJson.map((type) => type.type)
 
-const Configuration: UserConfig = {
+module.exports = {
     parserPreset: 'conventional-changelog-conventionalcommits',
     rules: {
         'body-leading-blank': [1, 'always'],
@@ -123,5 +123,3 @@ const Configuration: UserConfig = {
         },
     },
 }
-
-export default Configuration

@@ -1,4 +1,4 @@
-const indent = [2, 4];
+const indent = [2, 4]
 
 module.exports = {
     globals: {
@@ -89,4 +89,4 @@ module.exports = {
         'no-use-before-define': 'off',
         'react/prop-types': 0,
     },
-};
+}

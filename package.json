@@ -5,22 +5,14 @@
   "repository": "https://github.com/ISAYwtf/maccounter",
   "author": "Iskander Aydynov <iskander.aydynov@mail.ru>",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "yarn run build:ts && yarn run build:d.ts && yarn run build:clean",
-    "build:ts": "lerna exec --parallel 'BABEL_ENV=build babel ./ --root-mode upward --out-dir build  --copy-files --no-copy-ignored --extensions .ts,.tsx,.svg --delete-dir-on-start --no-comments'",
-    "build:d.ts": "yarn run generate:declaration",
-    "build:clean": "lerna exec --parallel 'rm -f build/tsconfig.json && rm -f build/*.log'",
-    "generate:declaration": "lerna exec --parallel 'ttsc'",
-    "publish": "yarn run build && lerna version && yarn run build && yarn run publish:prepare && lerna exec 'cd build && yarn publish --non-interactive' && yarn run publish:notify",
-    "publish:prepare": "yarn run publish:prepare:packageJson",
-    "publish:prepare:packageJson": "lerna exec --parallel 'node ../../scripts/utils/package/prepare.ts'",
-    "publish:notify": "cd scripts/release-notifications && yarn run notify",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "lint": "tsc --noEmit && eslint 'src/**'",
     "lint:fix": "yarn lint -- --fix",
     "lint:staged": "tsc --noEmit && eslint $(git diff --cached --name-only)",
     "lint:staged-fix": "yarn lint:staged -- --fix",
-    "prepare": "husky install",
-    "test": "BABEL_ENV=test lerna exec 'yarn jest --passWithNoTests'"
+    "prepare": "husky install"
   },
   "browserslist": {
     "production": [
@@ -37,6 +29,7 @@
   "devDependencies": {
     "@commitlint/cli": "^13.2.1",
     "@commitlint/config-conventional": "^13.2.0",
+    "@craco/craco": "^6.4.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -63,8 +56,6 @@
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "sass": "^1.35.2",
-    "ts-node": "^10.2.1",
-    "ttypescript": "^1.5.12",
     "typescript": "^4.1.2",
     "typescript-plugin-css-modules": "^3.4.0",
     "typescript-transform-paths": "^3.3.1",
