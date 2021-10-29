@@ -24,6 +24,7 @@
     "plugins": [
       {
         "transform": "typescript-transform-paths",
+        "css-modules": "typescript-plugin-css-modules",
         "afterDeclarations": true
       }
     ],
