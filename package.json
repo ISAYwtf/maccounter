@@ -8,9 +8,9 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "lint": "tsc --noEmit && eslint 'src/**'",
+    "lint": "tsc --noEmit && eslint --no-error-on-unmatched-pattern 'src/**'",
     "lint:fix": "yarn lint -- --fix",
-    "lint:staged": "tsc --noEmit && eslint $(git diff --cached --name-only)",
+    "lint:staged": "tsc --noEmit && eslint --no-error-on-unmatched-pattern $(git diff --cached --name-only)",
     "lint:staged-fix": "yarn lint:staged -- --fix",
     "prepare": "husky install"
   },

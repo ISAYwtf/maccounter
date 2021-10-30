@@ -24,7 +24,7 @@ module.exports = {
         'type-enum': [2, 'always', types],
     },
     defaultIgnores: true,
-    helpUrl: 'https://github.com/ISAYwtf/maccounter/CODE_CONVENTIONS.md',
+    helpUrl: 'https://github.com/ISAYwtf/maccounter/blob/main/COMMIT_CONVENTIONS.md',
     prompt: {
         messages: {
             skip: ':пропустить',
