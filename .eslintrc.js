@@ -17,6 +17,7 @@ module.exports = {
         'airbnb',
         'airbnb/rules/react',
         'airbnb/rules/react-hooks',
+        'plugin:css-modules/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -36,7 +37,7 @@ module.exports = {
                 project: './tsconfig.json',
             },
             node: {
-                extensions: ['.ts', '.tsx', '.js', '.jsx'],
+                extensions: ['.ts', '.tsx', '.js', '.jsx', '.svg'],
             },
         },
     },
@@ -44,6 +45,7 @@ module.exports = {
         'react',
         '@typescript-eslint',
         'import',
+        'css-modules',
     ],
     rules: {
         semi: ['error', 'never'],
@@ -71,7 +73,7 @@ module.exports = {
         curly: ['error', 'all'],
         '@typescript-eslint/indent': indent,
         '@typescript-eslint/no-unused-vars': [
-            'error',
+            'warn',
             {
                 argsIgnorePattern: '_',
             },
@@ -88,5 +90,7 @@ module.exports = {
         'react/jsx-props-no-spreading': 0,
         'no-use-before-define': 'off',
         'react/prop-types': 0,
+        'css-modules/no-unused-class': [1, { camelCase: true }],
+        'css-modules/no-undef-class': [1, { camelCase: true }],
     },
 }

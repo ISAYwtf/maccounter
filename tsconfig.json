@@ -13,12 +13,6 @@
     "resolveJsonModule": true,
     "jsx": "react-jsx",
     "removeComments": true,
-    "plugins": [
-      {
-        "transform": "typescript-transform-paths",
-        "css-modules": "typescript-plugin-css-modules"
-      }
-    ],
     "noEmit": true,
     "allowJs": true,
     "isolatedModules": true,

@@ -46,10 +46,12 @@
     height: 24px;
     transition: 0.08s;
     position: relative;
+    fill: var(--svg-color-fill);
     z-index: 1;
 
     path {
       transition: 0.08s;
+      stroke: var(--svg-color-stroke);
     }
   }
 }
@@ -88,7 +90,6 @@
 }
 
 /* При активной вкладке */
-
 .active {
   .sidebarProfile {
     background-color: var(--color-disable);
