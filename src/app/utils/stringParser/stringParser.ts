@@ -1,10 +1,9 @@
-const stringParser = (strToDecode: string) => {
-    const parser = new DOMParser()
-    const decodedStr = parser
-        .parseFromString(`<!doctype html><body>${strToDecode}`, 'text/html')
-        .body.textContent
-
-    return decodedStr
-}
+const stringParser = (strToDecode: string) => new DOMParser()
+    .parseFromString(
+        `<!doctype html><body>${strToDecode}`,
+        'text/html',
+    )
+    .body
+    .textContent
 
 export default stringParser

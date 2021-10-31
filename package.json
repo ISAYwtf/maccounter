@@ -7,7 +7,9 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "craco test",
+    "test": "CI=true yarn test:coverage --silent",
+    "test:clear": "yarn test --clearCache && yarn test",
+    "test:coverage": "CI=true craco test --coverage",
     "lint": "tsc --noEmit && eslint --no-error-on-unmatched-pattern 'src/**'",
     "lint:fix": "yarn lint -- --fix",
     "lint:staged": "tsc --noEmit && eslint --no-error-on-unmatched-pattern $(git diff --cached --name-only)",
