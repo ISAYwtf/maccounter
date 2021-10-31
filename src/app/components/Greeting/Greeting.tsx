@@ -4,7 +4,7 @@ import React from 'react'
 const Greeting: React.FC = () => (
     <div className="txt--title-small">
         <p>
-            Good morning,
+            Good morning,&nbsp;
             <span>User</span>
             !
         </p>
