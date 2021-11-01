@@ -1,11 +1,16 @@
 import React from 'react'
+import Logo from '@components/Logo/Logo'
+import Greeting from '@components/Greeting/Greeting'
+import HomePageSwitcher from '@components/HomePageSwitcher/HomePageSwitcher'
+import clsx from 'clsx'
 import styles from './Header.module.css'
-import Logo from '../Logo/Logo'
-import Greeting from '../Greeting/Greeting'
-import HomePageSwitcher from '../HomePageSwitcher/HomePageSwitcher'
 
 const Header: React.FC = () => (
-    <header className={`${styles.header} app-wrap`}>
+    <header className={clsx(
+        styles.header,
+        'app-wrap',
+    )}
+    >
         <div className={styles.headerLeft}>
             <div className={styles.appLogo}>
                 <Logo />
