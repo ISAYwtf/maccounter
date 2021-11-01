@@ -5,7 +5,8 @@
       "@utils/*": ["app/utils/*"],
       "@components/*": ["app/components/*"],
       "@assets/*": ["app/assets/*"],
-      "@icons/*": ["app/assets/img/icons/*"]
+      "@icons/*": ["app/assets/img/icons/*"],
+      "@testUtils/*": ["__testUtils__/*"]
     }
   }
 }
