@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Widget render Widget 1`] = `
+<DocumentFragment>
+  <div
+    class="component"
+  >
+    <p>
+      list
+    </p>
+  </div>
+</DocumentFragment>
+`;
