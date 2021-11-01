@@ -1,6 +1,6 @@
 import React from 'react'
+import Widget from '@components/Widget/Widget'
 import styles from './ContentPage.module.scss'
-import Widget from '../Widget/Widget'
 
 const ContentPage: React.FC = () => (
     <main className={styles.container}>

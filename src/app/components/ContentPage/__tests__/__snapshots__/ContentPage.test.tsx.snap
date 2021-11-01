@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContentPage render ContentPage 1`] = `
+<DocumentFragment>
+  <main
+    class="container"
+  >
+    <div>
+      <div
+        class="component container"
+      >
+        <p>
+          list
+        </p>
+      </div>
+    </div>
+  </main>
+</DocumentFragment>
+`;
