@@ -1,11 +1,15 @@
 import React from 'react'
 // import styles from './Greeting.module.css'
 
-const Greeting: React.FC = () => (
+interface GreetingProps {
+    userName: string,
+}
+
+const Greeting: React.FC<GreetingProps> = ({ userName }) => (
     <div className="txt--title-small">
         <p>
             Good morning,&nbsp;
-            <span>User</span>
+            <span>{userName}</span>
             !
         </p>
     </div>
