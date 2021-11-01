@@ -77,6 +77,7 @@ const Sidebar: React.FC = () => {
 
     const sidebarItem = (title: string, Ico: React.FC) => (
         <div
+            role="listitem"
             className={styles.sidebarItem}
             onMouseEnter={(e) => hoverSidebar(e.target as MouseEventType)}
             onMouseLeave={(e) => leaveSidebar(e.target as MouseEventType)}
@@ -95,6 +96,7 @@ const Sidebar: React.FC = () => {
                 'component',
             )}
             data-open="false"
+            role="navigation"
             onDoubleClick={(e) => openSidebar(e.target as MouseEventType)}
             ref={sidebarRef}
             style={sidebarStyles}
@@ -103,6 +105,8 @@ const Sidebar: React.FC = () => {
                 className={styles.sidebarItem}
                 onMouseEnter={(e) => hoverSidebar(e.target as MouseEventType)}
                 onMouseLeave={(e) => leaveSidebar(e.target as MouseEventType)}
+                role="listitem"
+                data-testid="sidebarItem-profile"
             >
                 <span className={styles.sidebarProfile}>IA</span>
                 <div className={styles.prompt}>
