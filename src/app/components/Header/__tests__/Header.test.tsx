@@ -1,12 +1,10 @@
 import React from 'react'
-import { render } from '@testing-library/react'
-import Header from '../Header'
+import { compareSnapshot } from '@testUtils/renderSnapshot'
+import Header from '@components/Header/Header'
 
 describe('Header', () => {
     const renderComponent = <Header />
 
-    it('render Header', () => {
-        const { asFragment } = render(renderComponent)
-        expect(asFragment()).toMatchSnapshot()
-    })
+    // eslint-disable-next-line jest/expect-expect
+    it('render Header', () => compareSnapshot(renderComponent))
 })

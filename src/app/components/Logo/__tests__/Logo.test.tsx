@@ -1,12 +1,10 @@
 import React from 'react'
-import { render } from '@testing-library/react'
-import Logo from '../Logo'
+import Logo from '@components/Logo/Logo'
+import { compareSnapshot } from '@testUtils/renderSnapshot'
 
 describe('Logo', () => {
     const renderComponent = <Logo />
 
-    it('render Logo', () => {
-        const { asFragment } = render(renderComponent)
-        expect(asFragment()).toMatchSnapshot()
-    })
+    // eslint-disable-next-line jest/expect-expect
+    it('render Logo', () => compareSnapshot(renderComponent))
 })

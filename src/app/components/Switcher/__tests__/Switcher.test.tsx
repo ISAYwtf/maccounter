@@ -1,12 +1,10 @@
 import React from 'react'
-import { render } from '@testing-library/react'
 import Switcher from '@components/Switcher/Switcher'
+import { compareSnapshot } from '@testUtils/renderSnapshot'
 
 describe('Switcher', () => {
     const renderComponent = <Switcher />
 
-    it('render Switcher', () => {
-        const { asFragment } = render(renderComponent)
-        expect(asFragment()).toMatchSnapshot()
-    })
+    // eslint-disable-next-line
+    it('render Switcher', () => compareSnapshot(renderComponent))
 })

@@ -1,4 +1,4 @@
-import stringParser from './stringParser'
+import stringParser from '@utils/stringParser/stringParser'
 
 it('stringParser', () => {
     const text = 'Hello,&nbsp;World!'
