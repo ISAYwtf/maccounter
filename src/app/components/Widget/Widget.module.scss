@@ -1,0 +1,35 @@
+.title {
+  display: flex;
+  align-items: center;
+
+  p {
+    padding-right: 20px;
+  }
+
+  svg {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+  }
+}
+
+.card {
+  position: relative;
+
+  .cardTitle {}
+
+  .cardNumber {
+    position: absolute;
+    bottom: calc(var(--size-font-side) * -1);
+    color: var(--color-side);
+    font-size: var(--size-font-side);
+  }
+}
+
+.sum {}
+
+.dots {
+  width: fit-content;
+  justify-content: center;
+  cursor: pointer;
+}

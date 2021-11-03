@@ -5,7 +5,7 @@ import styles from './ContentPage.module.scss'
 const ContentPage: React.FC = () => (
     <main className={styles.container}>
         <div>
-            <Widget type="list" />
+            <Widget title="Last expenses" />
         </div>
     </main>
 )

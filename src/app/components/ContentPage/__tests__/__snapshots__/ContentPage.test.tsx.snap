@@ -9,9 +9,148 @@ exports[`ContentPage render ContentPage 1`] = `
       <div
         class="component"
       >
-        <p>
-          list
-        </p>
+        <div
+          class="txt--title-small title"
+        >
+          <p>
+            Last expenses
+          </p>
+          <svg>
+            add.svg
+          </svg>
+        </div>
+        <div
+          class="rows"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="column card"
+            >
+              <p
+                class="cardTitle"
+              >
+                Mastercard
+              </p>
+              <p
+                class="cardNumber"
+              >
+                ****9474
+              </p>
+            </div>
+            <div
+              class="column sum"
+            >
+              <p>
+                3,000 ₽
+              </p>
+            </div>
+            <div
+              class="column dots"
+            >
+              <svg>
+                dots.svg
+              </svg>
+            </div>
+          </div>
+          <div
+            class="row"
+          >
+            <div
+              class="column card"
+            >
+              <p
+                class="cardTitle"
+              >
+                Mastercard
+              </p>
+              <p
+                class="cardNumber"
+              >
+                ****9474
+              </p>
+            </div>
+            <div
+              class="column sum"
+            >
+              <p>
+                3,000 ₽
+              </p>
+            </div>
+            <div
+              class="column dots"
+            >
+              <svg>
+                dots.svg
+              </svg>
+            </div>
+          </div>
+          <div
+            class="row"
+          >
+            <div
+              class="column card"
+            >
+              <p
+                class="cardTitle"
+              >
+                Mastercard
+              </p>
+              <p
+                class="cardNumber"
+              >
+                ****9474
+              </p>
+            </div>
+            <div
+              class="column sum"
+            >
+              <p>
+                17,000 ₽
+              </p>
+            </div>
+            <div
+              class="column dots"
+            >
+              <svg>
+                dots.svg
+              </svg>
+            </div>
+          </div>
+          <div
+            class="row"
+          >
+            <div
+              class="column card"
+            >
+              <p
+                class="cardTitle"
+              >
+                Mastercard
+              </p>
+              <p
+                class="cardNumber"
+              >
+                ****9474
+              </p>
+            </div>
+            <div
+              class="column sum"
+            >
+              <p>
+                1,150,000 ₽
+              </p>
+            </div>
+            <div
+              class="column dots"
+            >
+              <svg>
+                dots.svg
+              </svg>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
