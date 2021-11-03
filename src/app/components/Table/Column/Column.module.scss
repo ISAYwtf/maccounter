@@ -1,0 +1,9 @@
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
