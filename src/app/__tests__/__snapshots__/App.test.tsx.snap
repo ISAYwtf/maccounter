@@ -69,10 +69,10 @@ exports[`App render App 1`] = `
         role="navigation"
         style="top: 384px;"
       >
-        <div
+        <a
           class="sidebarItem"
-          data-testid="sidebarItem-profile"
-          role="listitem"
+          href="/profile"
+          role="link"
         >
           <span
             class="sidebarProfile"
@@ -86,10 +86,11 @@ exports[`App render App 1`] = `
               Profile
             </p>
           </div>
-        </div>
-        <div
+        </a>
+        <a
           class="sidebarItem"
-          role="listitem"
+          href="/home"
+          role="link"
         >
           <svg>
             home.svg
@@ -101,10 +102,11 @@ exports[`App render App 1`] = `
               Home
             </p>
           </div>
-        </div>
-        <div
+        </a>
+        <a
           class="sidebarItem"
-          role="listitem"
+          href="/accountancy"
+          role="link"
         >
           <svg>
             accountancy.svg
@@ -116,10 +118,11 @@ exports[`App render App 1`] = `
               Accountancy
             </p>
           </div>
-        </div>
-        <div
+        </a>
+        <a
           class="sidebarItem"
-          role="listitem"
+          href="/statistics"
+          role="link"
         >
           <svg>
             statistics.svg
@@ -131,10 +134,11 @@ exports[`App render App 1`] = `
               Statistics
             </p>
           </div>
-        </div>
-        <div
+        </a>
+        <a
           class="sidebarItem"
-          role="listitem"
+          href="/settings"
+          role="link"
         >
           <svg>
             settings.svg
@@ -146,10 +150,11 @@ exports[`App render App 1`] = `
               Settings
             </p>
           </div>
-        </div>
-        <div
+        </a>
+        <a
           class="sidebarItem"
-          role="listitem"
+          href="/add-operation"
+          role="link"
         >
           <svg>
             add.svg
@@ -161,7 +166,7 @@ exports[`App render App 1`] = `
               Add operation
             </p>
           </div>
-        </div>
+        </a>
       </div>
       <main
         class="container"

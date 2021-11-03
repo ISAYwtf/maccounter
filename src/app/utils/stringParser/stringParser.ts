@@ -1,4 +1,4 @@
-const stringParser = (strToDecode: string) => new DOMParser()
+const stringParser = (strToDecode: string): string | null => new DOMParser()
     .parseFromString(
         `<!doctype html><body>${strToDecode}`,
         'text/html',

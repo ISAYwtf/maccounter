@@ -6,9 +6,15 @@ import { ReactComponent as statisticsSvg } from '@icons/statistics.svg'
 import { ReactComponent as settingsSvg } from '@icons/settings.svg'
 import { ReactComponent as addSvg } from '@icons/add.svg'
 import clsx from 'clsx'
+import { RouteComponentProps, withRouter } from 'react-router-dom'
+import SidebarItem from '@components/Sidebar/SidebarItem'
+import { MouseEventType } from '@localTypes/EventTypes'
+import { v4 as createId } from 'uuid'
 import styles from './Sidebar.module.scss'
 
-const Sidebar: React.FC = () => {
+type SidebarProps = RouteComponentProps
+
+const Sidebar: React.FC<SidebarProps> = () => {
     const [sidebarHeight, setSidebarHeight] = useState(0)
 
     const sidebarRef = useCallback((node) => {
@@ -19,46 +25,6 @@ const Sidebar: React.FC = () => {
 
     const sidebarStyles = {
         top: `${window.innerHeight / 2 - sidebarHeight / 2}px`,
-    }
-
-    const DELAY = 500
-    let timerForShow: ReturnType<typeof setTimeout>
-
-    type MouseEventType = HTMLDivElement | undefined
-
-    const hoverSidebar = (item: MouseEventType) => {
-        const parent = item?.parentElement as MouseEventType
-        if (!item || !parent) {
-            return
-        }
-
-        if (item.classList.contains(styles.sidebarItem) && parent.dataset.open === 'false') {
-            timerForShow = setTimeout(() => {
-                item.classList.add(styles.promptActive)
-            }, DELAY)
-        } else if (parent.classList.contains(styles.sidebarItem)
-            && parent.parentElement?.dataset.open === 'false') {
-            timerForShow = setTimeout(() => {
-                parent.classList.add(styles.promptActive)
-            }, DELAY)
-        } else if (item.tagName === 'path') {
-            hoverSidebar(parent)
-        }
-    }
-
-    const leaveSidebar = (item: MouseEventType) => {
-        clearTimeout(timerForShow)
-        item?.classList.remove(styles.promptActive)
-        const parent = item?.parentElement as MouseEventType
-        if (!item || !parent) {
-            return
-        }
-
-        if (parent.classList.contains(styles.sidebarItem)) {
-            parent.classList.remove(styles.promptActive)
-        } else if (item.tagName === 'path') {
-            leaveSidebar(parent)
-        }
     }
 
     const openSidebar = (target: MouseEventType) => {
@@ -75,19 +41,26 @@ const Sidebar: React.FC = () => {
         }
     }
 
-    const sidebarItem = (title: string, Ico: React.FC) => (
-        <div
-            role="listitem"
-            className={styles.sidebarItem}
-            onMouseEnter={(e) => hoverSidebar(e.target as MouseEventType)}
-            onMouseLeave={(e) => leaveSidebar(e.target as MouseEventType)}
-        >
-            <Ico />
-            <div className={styles.prompt}>
-                <p>{stringParser(title)}</p>
-            </div>
-        </div>
-    )
+    const sidebarItems = [
+        { title: 'Profile', ico: undefined },
+        { title: 'Home', ico: homeSvg },
+        { title: 'Accountancy', ico: accountancySvg },
+        { title: 'Statistics', ico: statisticsSvg },
+        { title: 'Settings', ico: settingsSvg },
+        { title: 'Add&nbsp;operation', ico: addSvg },
+    ]
+
+    type Items = typeof sidebarItems
+
+    const mapItemToSidebar = (items: Items) => items.map((item) => {
+        const { title, ico } = item
+        const parsedTitle = stringParser(title) ?? title
+        const link = `/${parsedTitle.toLowerCase().replace(/\s/g, '-')}`
+
+        return (
+            <SidebarItem key={createId()} title={parsedTitle} Ico={ico} link={link} />
+        )
+    })
 
     return (
         <div
@@ -101,26 +74,9 @@ const Sidebar: React.FC = () => {
             ref={sidebarRef}
             style={sidebarStyles}
         >
-            <div
-                className={styles.sidebarItem}
-                onMouseEnter={(e) => hoverSidebar(e.target as MouseEventType)}
-                onMouseLeave={(e) => leaveSidebar(e.target as MouseEventType)}
-                role="listitem"
-                data-testid="sidebarItem-profile"
-            >
-                <span className={styles.sidebarProfile}>IA</span>
-                <div className={styles.prompt}>
-                    <p>Profile</p>
-                </div>
-            </div>
-            {sidebarItem('Home', homeSvg)}
-            {sidebarItem('Accountancy', accountancySvg)}
-            {sidebarItem('Statistics', statisticsSvg)}
-            {sidebarItem('Settings', settingsSvg)}
-            {sidebarItem('Add&nbsp;operation', addSvg)}
-
+            {mapItemToSidebar(sidebarItems)}
         </div>
     )
 }
 
-export default Sidebar
+export default withRouter(Sidebar)
