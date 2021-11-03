@@ -2,6 +2,7 @@ packages/**/build
 
 *.svg
 *.otf
+*.ttf
 *.md
 *.css
 *.scss

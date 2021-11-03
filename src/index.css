@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+@import "fonts.css";
 
 :root {
-  --font-family: 'Montserrat';
+  --font-family: Montserrat;
   --size-font-base: 1rem;
   --size-font-title-small: calc(var(--size-font-base) * 1.5);
   --size-font-logo: calc(var(--size-font-base) * 2.25);
