@@ -7,11 +7,11 @@ import { ReactComponent as DotsSvg } from '@icons/dots.svg'
 import { ReactComponent as AddSvg } from '@icons/add.svg'
 import { ruble, space } from '@assets/symbols'
 import { WidgetProps } from '@components/Widget/WidgetProps'
-import { InitialState } from '@store/expenses/initialState'
+import { ExpensesInitialState } from '@store/expenses/expensesInitialState'
 import { v4 as createId } from 'uuid'
 import styles from './Widget.module.scss'
 
-const mapDataToRow = (data: InitialState) => data.map((el) => {
+const mapDataToRow = (data: ExpensesInitialState) => data.map((el) => {
     const cardNumber = `****${el.card.number.slice(-4)}`
     const sum = el.sumOfExpenses.toLocaleString()
     return (

@@ -1,7 +1,7 @@
 import { BasePropsWithoutChild } from '@localTypes/BaseProps'
-import { InitialState } from '@store/expenses/initialState'
+import { ExpensesInitialState } from '@store/expenses/expensesInitialState'
 
 export interface WidgetProps extends BasePropsWithoutChild {
     title: string,
-    expenses: InitialState
+    expenses: ExpensesInitialState
 }

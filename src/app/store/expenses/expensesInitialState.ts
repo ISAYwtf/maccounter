@@ -33,4 +33,4 @@ export const INITIAL_STATE = [
     },
 ]
 
-export type InitialState = typeof INITIAL_STATE
+export type ExpensesInitialState = typeof INITIAL_STATE

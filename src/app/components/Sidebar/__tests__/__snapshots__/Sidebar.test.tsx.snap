@@ -4,9 +4,8 @@ exports[`Sidebar render Sidebar 1`] = `
 <DocumentFragment>
   <div
     class="sidebar component"
-    data-open="false"
     role="navigation"
-    style="top: 384px;"
+    style="top: 384px; width: 64px;"
   >
     <a
       class="sidebarItem"

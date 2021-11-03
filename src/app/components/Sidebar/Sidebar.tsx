@@ -1,64 +1,66 @@
 import React, { useCallback, useState } from 'react'
 import stringParser from '@utils/stringParser/stringParser'
-import { ReactComponent as homeSvg } from '@icons/home.svg'
-import { ReactComponent as accountancySvg } from '@icons/accountancy.svg'
-import { ReactComponent as statisticsSvg } from '@icons/statistics.svg'
-import { ReactComponent as settingsSvg } from '@icons/settings.svg'
-import { ReactComponent as addSvg } from '@icons/add.svg'
 import clsx from 'clsx'
-import { RouteComponentProps, withRouter } from 'react-router-dom'
 import SidebarItem from '@components/Sidebar/SidebarItem'
-import { MouseEventType } from '@localTypes/EventTypes'
 import { v4 as createId } from 'uuid'
+import { connect } from 'react-redux'
+import { State } from '@store/redux-store'
+import { getSidebarState } from '@store/sidebar/sidebarSelectors'
+import { SidebarInitialState } from '@store/sidebar/sidebarInitialState'
+// eslint-disable-next-line css-modules/no-unused-class
 import styles from './Sidebar.module.scss'
 
-type SidebarProps = RouteComponentProps
+interface SidebarProps {
+    sidebarItems: SidebarInitialState
+}
 
-const Sidebar: React.FC<SidebarProps> = () => {
+const Sidebar: React.FC<SidebarProps> = (props) => {
+    const { sidebarItems } = props
+    const [isOpened, setIsOpened] = useState(false)
     const [sidebarHeight, setSidebarHeight] = useState(0)
+    const [sidebarItemsWidth, setSidebarItemsWidth] = useState<number[]>([])
+    let sidebarItemsMaxWidth = 24
 
+    if (sidebarItemsWidth.length) {
+        sidebarItemsMaxWidth = Math.max(...sidebarItemsWidth)
+    }
+
+    const sidebarWidths = { min: 64, max: `${sidebarItemsMaxWidth + 64}px` }
     const sidebarRef = useCallback((node) => {
         if (node !== null) {
             setSidebarHeight(node.getBoundingClientRect().height)
         }
     }, [])
-
     const sidebarStyles = {
         top: `${window.innerHeight / 2 - sidebarHeight / 2}px`,
+        width: isOpened ? sidebarWidths.max : sidebarWidths.min,
     }
-
-    const openSidebar = (target: MouseEventType) => {
-        const sidebar = target
-        if (!sidebar) {
-            return
-        }
-        const isOpen = sidebar.dataset.open === 'true'
-
-        if (!isOpen) {
-            sidebar.dataset.open = 'true'
-        } else {
-            sidebar.dataset.open = 'false'
-        }
+    const openSidebar = () => {
+        setIsOpened(!isOpened)
     }
-
-    const sidebarItems = [
-        { title: 'Profile', ico: undefined },
-        { title: 'Home', ico: homeSvg },
-        { title: 'Accountancy', ico: accountancySvg },
-        { title: 'Statistics', ico: statisticsSvg },
-        { title: 'Settings', ico: settingsSvg },
-        { title: 'Add&nbsp;operation', ico: addSvg },
-    ]
+    const sidebarItemsRef = useCallback((node) => {
+        const widths = sidebarItemsWidth
+        if (node !== null) {
+            widths?.push(node.children[1].getBoundingClientRect().width)
+            setSidebarItemsWidth(widths)
+        }
+    }, [sidebarItemsWidth])
 
     type Items = typeof sidebarItems
-
     const mapItemToSidebar = (items: Items) => items.map((item) => {
         const { title, ico } = item
         const parsedTitle = stringParser(title) ?? title
         const link = `/${parsedTitle.toLowerCase().replace(/\s/g, '-')}`
 
         return (
-            <SidebarItem key={createId()} title={parsedTitle} Ico={ico} link={link} />
+            <SidebarItem
+                isSidebarOpened={isOpened}
+                ref={sidebarItemsRef}
+                key={createId()}
+                title={parsedTitle}
+                Ico={ico}
+                link={link}
+            />
         )
     })
 
@@ -67,10 +69,10 @@ const Sidebar: React.FC<SidebarProps> = () => {
             className={clsx(
                 styles.sidebar,
                 'component',
+                { [styles.opened]: isOpened },
             )}
-            data-open="false"
             role="navigation"
-            onDoubleClick={(e) => openSidebar(e.target as MouseEventType)}
+            onDoubleClick={openSidebar}
             ref={sidebarRef}
             style={sidebarStyles}
         >
@@ -79,4 +81,8 @@ const Sidebar: React.FC<SidebarProps> = () => {
     )
 }
 
-export default withRouter(Sidebar)
+const mapStateToProps = (state: State) => ({
+    sidebarItems: getSidebarState(state),
+})
+
+export default connect(mapStateToProps)(Sidebar)

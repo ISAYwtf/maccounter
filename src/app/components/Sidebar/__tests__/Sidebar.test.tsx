@@ -2,13 +2,17 @@ import React from 'react'
 import { compareSnapshot } from '@testUtils/renderSnapshot'
 import Sidebar from '@components/Sidebar/Sidebar'
 import { fireEvent, render, screen } from '@testing-library/react'
+import { Provider } from 'react-redux'
+import store from '@store/redux-store'
 import { BrowserRouter } from 'react-router-dom'
 
 describe('Sidebar', () => {
     const renderComponent = <Sidebar />
     const wrapper: React.FC = ({ children }) => (
         <BrowserRouter>
-            {children}
+            <Provider store={store}>
+                {children}
+            </Provider>
         </BrowserRouter>
     )
 
@@ -16,20 +20,6 @@ describe('Sidebar', () => {
 
     // eslint-disable-next-line
     it('render Sidebar', () => compareSnapshot(renderComponent, wrapper))
-
-    it('dbClick should toggle data-open', () => {
-        const { getByRole } = render(renderComponent, { wrapper })
-        const sidebar = getByRole('navigation')
-        let dataOpen
-
-        fireEvent.dblClick(sidebar)
-        dataOpen = sidebar.dataset.open
-        expect(dataOpen).toStrictEqual('true')
-
-        fireEvent.dblClick(sidebar)
-        dataOpen = sidebar.dataset.open
-        expect(dataOpen).toStrictEqual('false')
-    })
 
     const checkEvent = (item: HTMLElement) => {
         fireEvent.mouseEnter(item)
