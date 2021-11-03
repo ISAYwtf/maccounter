@@ -1,11 +1,11 @@
 import React from 'react'
-import Widget from '@components/Widget/Widget'
+import WidgetContainer from '@components/Widget/WidgetContainer'
 import styles from './ContentPage.module.scss'
 
 const ContentPage: React.FC = () => (
     <main className={styles.container}>
         <div>
-            <Widget title="Last expenses" />
+            <WidgetContainer title="Last expenses" />
         </div>
     </main>
 )

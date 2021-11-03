@@ -1,10 +1,17 @@
 import React from 'react'
-import Widget from '@components/Widget/Widget'
 import { compareSnapshot } from '@testUtils/renderSnapshot'
+import WidgetContainer from '@components/Widget/WidgetContainer'
+import { Provider } from 'react-redux'
+import store from '@store/redux-store'
 
 describe('Widget', () => {
-    const renderComponent = <Widget title="Last expenses" />
+    const renderComponent = <WidgetContainer title="Last expenses" />
+    const wrapper: React.FC = ({ children }) => (
+        <Provider store={store}>
+            {children}
+        </Provider>
+    )
 
     // eslint-disable-next-line
-    it('render Widget', () => compareSnapshot(renderComponent))
+    it('render Widget', () => compareSnapshot(renderComponent, wrapper))
 })

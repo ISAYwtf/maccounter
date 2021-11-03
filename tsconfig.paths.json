@@ -7,7 +7,8 @@
       "@localTypes/*": ["app/types/*"],
       "@assets/*": ["app/assets/*"],
       "@icons/*": ["app/assets/img/icons/*"],
-      "@testUtils/*": ["__testUtils__/*"]
+      "@testUtils/*": ["__testUtils__/*"],
+      "@store/*": ["app/store/*"]
     }
   }
 }

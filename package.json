@@ -34,6 +34,7 @@
       "^@components(.*)$": "<rootDir>/src/app/components$1",
       "^@utils(.*)$": "<rootDir>/src/app/utils$1",
       "^@assets(.*)$": "<rootDir>/src/app/assets$1",
+      "^@store(.*)$": "<rootDir>/src/app/store$1",
       "^@icons(.*)$": "<rootDir>/src/app/assets/img/icons$1",
       "^@testUtils(.*)$": "<rootDir>/src/__testUtils__$1"
     },
@@ -72,7 +73,9 @@
     "identity-obj-proxy": "^3.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
     "react-scripts": "4.0.3",
+    "redux": "^4.1.2",
     "sass": "^1.35.2",
     "typescript": "^4.1.2",
     "typescript-plugin-css-modules": "^3.4.0",
