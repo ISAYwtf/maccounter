@@ -105,6 +105,23 @@ exports[`Sidebar render Sidebar 1`] = `
         </p>
       </div>
     </a>
+    <a
+      aria-current="page"
+      class="sidebarItem expand active"
+      href="/"
+      role="link"
+    >
+      <svg>
+        expand.svg
+      </svg>
+      <div
+        class="prompt"
+      >
+        <p>
+          Expand sidebar
+        </p>
+      </div>
+    </a>
   </div>
 </DocumentFragment>
 `;

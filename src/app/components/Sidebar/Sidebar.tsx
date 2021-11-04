@@ -7,6 +7,8 @@ import { connect } from 'react-redux'
 import { State } from '@store/redux-store'
 import { getSidebarState } from '@store/sidebar/sidebarSelectors'
 import { SidebarInitialState } from '@store/sidebar/sidebarInitialState'
+import { ReactComponent as expandSvg } from '@icons/expand.svg'
+
 // eslint-disable-next-line css-modules/no-unused-class
 import styles from './Sidebar.module.scss'
 
@@ -77,6 +79,16 @@ const Sidebar: React.FC<SidebarProps> = (props) => {
             style={sidebarStyles}
         >
             {mapItemToSidebar(sidebarItems)}
+            <SidebarItem
+                className={styles.expand}
+                title="Expand&nbsp;sidebar"
+                Ico={expandSvg}
+                link="/"
+                isSidebarOpened={isOpened}
+                ref={sidebarItemsRef}
+                isLinked={false}
+                onClick={openSidebar}
+            />
         </div>
     )
 }

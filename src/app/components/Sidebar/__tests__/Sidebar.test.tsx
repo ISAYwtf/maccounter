@@ -16,38 +16,24 @@ describe('Sidebar', () => {
         </BrowserRouter>
     )
 
-    beforeEach(() => jest.useFakeTimers())
-
     // eslint-disable-next-line
     it('render Sidebar', () => compareSnapshot(renderComponent, wrapper))
 
-    const checkEvent = (item: HTMLElement) => {
-        fireEvent.mouseEnter(item)
-        expect(setTimeout).toHaveBeenCalledTimes(1)
-        expect(setTimeout).toHaveBeenCalledWith(expect.any(Function), 1000)
-        fireEvent.mouseLeave(item)
-
-        jest.useFakeTimers()
-
-        fireEvent.mouseEnter(item.children[0])
-        expect(setTimeout).toHaveBeenCalledTimes(1)
-        expect(setTimeout).toHaveBeenCalledWith(expect.any(Function), 1000)
-        fireEvent.mouseLeave(item.children[0])
-    }
-
-    // eslint-disable-next-line jest/expect-expect
-    it('mouse enter should call timeout from sidebarItem profile', () => {
-        render(renderComponent, { wrapper })
-
-        const sidebarItemProfile = screen.getAllByRole('link')[0]
-        checkEvent(sidebarItemProfile)
-    })
-
-    // eslint-disable-next-line jest/expect-expect
     it('mouse enter should call timeout from sidebarItems', () => {
+        jest.useFakeTimers()
         render(renderComponent, { wrapper })
 
         const sidebarItem = screen.getAllByRole('link')[1]
-        checkEvent(sidebarItem)
+        fireEvent.mouseEnter(sidebarItem)
+        expect(setTimeout).toHaveBeenCalledTimes(1)
+        expect(setTimeout).toHaveBeenCalledWith(expect.any(Function), 1000)
+        fireEvent.mouseLeave(sidebarItem)
+    })
+
+    it('dbClick should open sidebar', () => {
+        render(renderComponent, { wrapper })
+        const sidebar = screen.getByRole('navigation')
+        fireEvent.dblClick(sidebar)
+        expect(sidebar.classList.contains('opened')).toBe(true)
     })
 })

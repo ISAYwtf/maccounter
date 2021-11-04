@@ -71,6 +71,39 @@
   z-index: 1;
 }
 
+.expand {
+  svg {
+    fill: none;
+
+    path {
+      stroke: var(--svg-color-stroke);
+    }
+  }
+}
+
+/* При активной вкладке */
+.active {
+  .sidebarProfile {
+    background-color: var(--color-disable);
+    color: var(--color-side);
+    border-color: var(--color-side);
+  }
+
+  svg {
+    --svg-color-fill: var(--color-disable);
+
+    path {
+      --svg-color-stroke: var(--color-side);
+    }
+  }
+
+  &.expand {
+    path {
+      stroke: var(--color-disable);
+    }
+  }
+}
+
 /* При наведении */
 
 .sidebarItem:hover {
@@ -78,6 +111,7 @@
   .sidebarProfile {
     background-color: var(--color-main);
     border-color: var(--color-main);
+    color: var(--color-bg-component);
   }
 
   svg {
@@ -87,27 +121,17 @@
       --svg-color-stroke: var(--color-bg-component);
     }
   }
-}
 
-/* При активной вкладке */
-.active {
-  .sidebarProfile {
-    background-color: var(--color-disable);
-    color: var(--color-bg-component);
-  }
-
-  svg {
-    --svg-color-fill: var(--color-disable);
-
+  &.expand {
     path {
-      --svg-color-stroke: var(--color-bg-component);
+      stroke: var(--svg-color-fill);
     }
   }
 }
 
 /* При наведении и ожидании 0.5с */
 
-.promptActive.sidebarItem {
+.promptActive {
   position: relative;
 
   &.sidebarItem {
@@ -122,6 +146,12 @@
     .sidebarProfile {
       background-color: var(--color-main);
       border-color: var(--color-bg-component);
+    }
+
+    &.expand {
+      path {
+        stroke: var(--svg-color-stroke);
+      }
     }
   }
 
@@ -157,13 +187,18 @@
     }
 
     .prompt {
-      //position: relative;
       pointer-events: unset;
       opacity: 1;
       transform: scaleX(1);
       color: var(--color-txt);
       margin-left: 20px;
       padding-right: 0;
+    }
+
+    &.expand {
+      path {
+        stroke: var(--svg-color-stroke);
+      }
     }
 
     &:hover {
