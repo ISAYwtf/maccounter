@@ -50,6 +50,7 @@ span {
     border-radius: var(--size-border-rad-component);
     padding: var(--size-padding-component);
     background-color: var(--color-bg-component);
+    height: fit-content;
 }
 
 /* Локальные свойства */

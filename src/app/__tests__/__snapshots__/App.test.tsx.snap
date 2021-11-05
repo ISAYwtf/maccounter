@@ -187,150 +187,586 @@ exports[`App render App 1`] = `
       <main
         class="container"
       >
-        <div>
+        <div
+          class="component container"
+        >
           <div
-            class="component"
+            class="txt--title-small title"
+          >
+            <p>
+              Last expenses
+            </p>
+            <svg>
+              add.svg
+            </svg>
+          </div>
+          <div
+            class="rows"
           >
             <div
-              class="txt--title-small title"
+              class="row"
             >
-              <p>
-                Last expenses
-              </p>
-              <svg>
-                add.svg
-              </svg>
+              <div
+                class="column card"
+              >
+                <p
+                  class="cardTitle"
+                >
+                  Mastercard
+                </p>
+                <p
+                  class="cardNumber"
+                >
+                  ****9474
+                </p>
+              </div>
+              <div
+                class="column sum"
+              >
+                <p>
+                  3,000 ₽
+                </p>
+              </div>
+              <div
+                class="column dots"
+              >
+                <svg>
+                  dots.svg
+                </svg>
+              </div>
             </div>
             <div
-              class="rows"
+              class="row"
             >
               <div
-                class="row"
+                class="column card"
               >
-                <div
-                  class="column card"
+                <p
+                  class="cardTitle"
                 >
-                  <p
-                    class="cardTitle"
-                  >
-                    Mastercard
-                  </p>
-                  <p
-                    class="cardNumber"
-                  >
-                    ****9474
-                  </p>
-                </div>
-                <div
-                  class="column sum"
+                  Mastercard
+                </p>
+                <p
+                  class="cardNumber"
                 >
-                  <p>
-                    3,000 ₽
-                  </p>
-                </div>
-                <div
-                  class="column dots"
-                >
-                  <svg>
-                    dots.svg
-                  </svg>
-                </div>
+                  ****9474
+                </p>
               </div>
               <div
-                class="row"
+                class="column sum"
               >
-                <div
-                  class="column card"
-                >
-                  <p
-                    class="cardTitle"
-                  >
-                    Mastercard
-                  </p>
-                  <p
-                    class="cardNumber"
-                  >
-                    ****9474
-                  </p>
-                </div>
-                <div
-                  class="column sum"
-                >
-                  <p>
-                    3,000 ₽
-                  </p>
-                </div>
-                <div
-                  class="column dots"
-                >
-                  <svg>
-                    dots.svg
-                  </svg>
-                </div>
+                <p>
+                  3,000 ₽
+                </p>
               </div>
               <div
-                class="row"
+                class="column dots"
               >
-                <div
-                  class="column card"
+                <svg>
+                  dots.svg
+                </svg>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="column card"
+              >
+                <p
+                  class="cardTitle"
                 >
-                  <p
-                    class="cardTitle"
-                  >
-                    Mastercard
-                  </p>
-                  <p
-                    class="cardNumber"
-                  >
-                    ****9474
-                  </p>
-                </div>
-                <div
-                  class="column sum"
+                  Mastercard
+                </p>
+                <p
+                  class="cardNumber"
                 >
-                  <p>
-                    17,000 ₽
-                  </p>
-                </div>
-                <div
-                  class="column dots"
-                >
-                  <svg>
-                    dots.svg
-                  </svg>
-                </div>
+                  ****9474
+                </p>
               </div>
               <div
-                class="row"
+                class="column sum"
               >
-                <div
-                  class="column card"
+                <p>
+                  17,000 ₽
+                </p>
+              </div>
+              <div
+                class="column dots"
+              >
+                <svg>
+                  dots.svg
+                </svg>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="column card"
+              >
+                <p
+                  class="cardTitle"
                 >
-                  <p
-                    class="cardTitle"
-                  >
-                    Mastercard
-                  </p>
-                  <p
-                    class="cardNumber"
-                  >
-                    ****9474
-                  </p>
-                </div>
-                <div
-                  class="column sum"
+                  Mastercard
+                </p>
+                <p
+                  class="cardNumber"
                 >
-                  <p>
-                    1,150,000 ₽
-                  </p>
-                </div>
-                <div
-                  class="column dots"
+                  ****9474
+                </p>
+              </div>
+              <div
+                class="column sum"
+              >
+                <p>
+                  1,150,000 ₽
+                </p>
+              </div>
+              <div
+                class="column dots"
+              >
+                <svg>
+                  dots.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="component container"
+        >
+          <div
+            class="txt--title-small title"
+          >
+            <p>
+              Last expenses
+            </p>
+            <svg>
+              add.svg
+            </svg>
+          </div>
+          <div
+            class="rows"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="column card"
+              >
+                <p
+                  class="cardTitle"
                 >
-                  <svg>
-                    dots.svg
-                  </svg>
-                </div>
+                  Mastercard
+                </p>
+                <p
+                  class="cardNumber"
+                >
+                  ****9474
+                </p>
+              </div>
+              <div
+                class="column sum"
+              >
+                <p>
+                  3,000 ₽
+                </p>
+              </div>
+              <div
+                class="column dots"
+              >
+                <svg>
+                  dots.svg
+                </svg>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="column card"
+              >
+                <p
+                  class="cardTitle"
+                >
+                  Mastercard
+                </p>
+                <p
+                  class="cardNumber"
+                >
+                  ****9474
+                </p>
+              </div>
+              <div
+                class="column sum"
+              >
+                <p>
+                  3,000 ₽
+                </p>
+              </div>
+              <div
+                class="column dots"
+              >
+                <svg>
+                  dots.svg
+                </svg>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="column card"
+              >
+                <p
+                  class="cardTitle"
+                >
+                  Mastercard
+                </p>
+                <p
+                  class="cardNumber"
+                >
+                  ****9474
+                </p>
+              </div>
+              <div
+                class="column sum"
+              >
+                <p>
+                  17,000 ₽
+                </p>
+              </div>
+              <div
+                class="column dots"
+              >
+                <svg>
+                  dots.svg
+                </svg>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="column card"
+              >
+                <p
+                  class="cardTitle"
+                >
+                  Mastercard
+                </p>
+                <p
+                  class="cardNumber"
+                >
+                  ****9474
+                </p>
+              </div>
+              <div
+                class="column sum"
+              >
+                <p>
+                  1,150,000 ₽
+                </p>
+              </div>
+              <div
+                class="column dots"
+              >
+                <svg>
+                  dots.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="component container"
+        >
+          <div
+            class="txt--title-small title"
+          >
+            <p>
+              Last expenses
+            </p>
+            <svg>
+              add.svg
+            </svg>
+          </div>
+          <div
+            class="rows"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="column card"
+              >
+                <p
+                  class="cardTitle"
+                >
+                  Mastercard
+                </p>
+                <p
+                  class="cardNumber"
+                >
+                  ****9474
+                </p>
+              </div>
+              <div
+                class="column sum"
+              >
+                <p>
+                  3,000 ₽
+                </p>
+              </div>
+              <div
+                class="column dots"
+              >
+                <svg>
+                  dots.svg
+                </svg>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="column card"
+              >
+                <p
+                  class="cardTitle"
+                >
+                  Mastercard
+                </p>
+                <p
+                  class="cardNumber"
+                >
+                  ****9474
+                </p>
+              </div>
+              <div
+                class="column sum"
+              >
+                <p>
+                  3,000 ₽
+                </p>
+              </div>
+              <div
+                class="column dots"
+              >
+                <svg>
+                  dots.svg
+                </svg>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="column card"
+              >
+                <p
+                  class="cardTitle"
+                >
+                  Mastercard
+                </p>
+                <p
+                  class="cardNumber"
+                >
+                  ****9474
+                </p>
+              </div>
+              <div
+                class="column sum"
+              >
+                <p>
+                  17,000 ₽
+                </p>
+              </div>
+              <div
+                class="column dots"
+              >
+                <svg>
+                  dots.svg
+                </svg>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="column card"
+              >
+                <p
+                  class="cardTitle"
+                >
+                  Mastercard
+                </p>
+                <p
+                  class="cardNumber"
+                >
+                  ****9474
+                </p>
+              </div>
+              <div
+                class="column sum"
+              >
+                <p>
+                  1,150,000 ₽
+                </p>
+              </div>
+              <div
+                class="column dots"
+              >
+                <svg>
+                  dots.svg
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="component container"
+        >
+          <div
+            class="txt--title-small title"
+          >
+            <p>
+              Last expenses
+            </p>
+            <svg>
+              add.svg
+            </svg>
+          </div>
+          <div
+            class="rows"
+          >
+            <div
+              class="row"
+            >
+              <div
+                class="column card"
+              >
+                <p
+                  class="cardTitle"
+                >
+                  Mastercard
+                </p>
+                <p
+                  class="cardNumber"
+                >
+                  ****9474
+                </p>
+              </div>
+              <div
+                class="column sum"
+              >
+                <p>
+                  3,000 ₽
+                </p>
+              </div>
+              <div
+                class="column dots"
+              >
+                <svg>
+                  dots.svg
+                </svg>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="column card"
+              >
+                <p
+                  class="cardTitle"
+                >
+                  Mastercard
+                </p>
+                <p
+                  class="cardNumber"
+                >
+                  ****9474
+                </p>
+              </div>
+              <div
+                class="column sum"
+              >
+                <p>
+                  3,000 ₽
+                </p>
+              </div>
+              <div
+                class="column dots"
+              >
+                <svg>
+                  dots.svg
+                </svg>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="column card"
+              >
+                <p
+                  class="cardTitle"
+                >
+                  Mastercard
+                </p>
+                <p
+                  class="cardNumber"
+                >
+                  ****9474
+                </p>
+              </div>
+              <div
+                class="column sum"
+              >
+                <p>
+                  17,000 ₽
+                </p>
+              </div>
+              <div
+                class="column dots"
+              >
+                <svg>
+                  dots.svg
+                </svg>
+              </div>
+            </div>
+            <div
+              class="row"
+            >
+              <div
+                class="column card"
+              >
+                <p
+                  class="cardTitle"
+                >
+                  Mastercard
+                </p>
+                <p
+                  class="cardNumber"
+                >
+                  ****9474
+                </p>
+              </div>
+              <div
+                class="column sum"
+              >
+                <p>
+                  1,150,000 ₽
+                </p>
+              </div>
+              <div
+                class="column dots"
+              >
+                <svg>
+                  dots.svg
+                </svg>
               </div>
             </div>
           </div>

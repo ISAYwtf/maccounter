@@ -1,3 +1,7 @@
+.container {
+  margin: 0 var(--size-space-between-component) var(--size-space-between-component) 0;
+}
+
 .title {
   display: flex;
   align-items: center;

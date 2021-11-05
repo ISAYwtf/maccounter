@@ -4,9 +4,10 @@ import styles from './ContentPage.module.scss'
 
 const ContentPage: React.FC = () => (
     <main className={styles.container}>
-        <div>
-            <WidgetContainer title="Last expenses" />
-        </div>
+        <WidgetContainer title="Last expenses" />
+        <WidgetContainer title="Last expenses" />
+        <WidgetContainer title="Last expenses" />
+        <WidgetContainer title="Last expenses" />
     </main>
 )
 

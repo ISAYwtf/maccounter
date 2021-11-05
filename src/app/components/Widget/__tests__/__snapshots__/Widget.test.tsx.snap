@@ -3,7 +3,7 @@
 exports[`Widget render Widget 1`] = `
 <DocumentFragment>
   <div
-    class="component"
+    class="component container"
   >
     <div
       class="txt--title-small title"

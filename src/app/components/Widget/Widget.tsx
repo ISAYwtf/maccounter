@@ -38,7 +38,11 @@ const Widget: React.FC<WidgetProps> = ({
     title,
     expenses,
 }) => (
-    <div className="component">
+    <div className={clsx(
+        'component',
+        styles.container,
+    )}
+    >
         <div className={clsx(
             'txt--title-small',
             styles.title,
