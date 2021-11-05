@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import React from 'react'
 import Widget from '@components/Widget/Widget'
-import { getExpensesState } from '@store/expenses/expensesSelectors'
+import { getExpensesState } from '@store/expenses-store/expensesSelectors'
 import { WidgetProps } from '@components/Widget/WidgetProps'
 import { State } from '@store/redux-store'
 

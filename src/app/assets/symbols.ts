@@ -1,4 +1,4 @@
-import stringParser from '@utils/stringParser/stringParser'
+import { htmlStringParser } from '@utils/stringParser'
 
-export const ruble = stringParser('&#8381;')
-export const space = stringParser('&nbsp;')
+export const ruble = htmlStringParser('&#8381;')
+export const space = htmlStringParser('&nbsp;')

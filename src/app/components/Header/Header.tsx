@@ -1,6 +1,6 @@
+import GreetingContainer from '@components/Greeting/GreetingContainer'
 import React from 'react'
 import Logo from '@components/Logo/Logo'
-import Greeting from '@components/Greeting/Greeting'
 import HomePageSwitcher from '@components/HomePageSwitcher/HomePageSwitcher'
 import clsx from 'clsx'
 import styles from './Header.module.css'
@@ -16,7 +16,7 @@ const Header: React.FC = () => (
                 <Logo />
             </div>
             <div>
-                <Greeting userName="User" />
+                <GreetingContainer userName="User" />
             </div>
         </div>
         <HomePageSwitcher />

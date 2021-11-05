@@ -7,7 +7,7 @@ import { ReactComponent as DotsSvg } from '@icons/dots.svg'
 import { ReactComponent as AddSvg } from '@icons/add.svg'
 import { ruble, space } from '@assets/symbols'
 import { WidgetProps } from '@components/Widget/WidgetProps'
-import { ExpensesInitialState } from '@store/expenses/expensesInitialState'
+import { ExpensesInitialState } from '@store/expenses-store/expensesInitialState'
 import { v4 as createId } from 'uuid'
 import styles from './Widget.module.scss'
 

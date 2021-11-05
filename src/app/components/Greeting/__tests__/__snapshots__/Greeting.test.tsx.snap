@@ -1,12 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Greeting render Greeting 1`] = `
+exports[`Greeting render afternoon 1`] = `
 <DocumentFragment>
   <div
     class="txt--title-small"
   >
     <p>
-      Good morning, 
+      Good afternoon, 
+      <span>
+        Jack
+      </span>
+      !
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Greeting render evening 1`] = `
+<DocumentFragment>
+  <div
+    class="txt--title-small"
+  >
+    <p>
+      Good evening, 
+      <span>
+        Jack
+      </span>
+      !
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Greeting render morning 1`] = `
+<DocumentFragment>
+  <div
+    class="txt--title-small"
+  >
+    <p>
+      Good morning, 
+      <span>
+        Jack
+      </span>
+      !
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Greeting render night 1`] = `
+<DocumentFragment>
+  <div
+    class="txt--title-small"
+  >
+    <p>
+      Good night, 
       <span>
         Jack
       </span>
