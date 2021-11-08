@@ -21,7 +21,7 @@ const Sidebar: React.FC = () => {
         sidebarItemsMaxWidth = Math.max(...sidebarItemsWidth)
     }
 
-    const sidebarWidths = { min: 64, max: `${sidebarItemsMaxWidth + 64}px` }
+    const sidebarWidths = { min: 64, max: `${sidebarItemsMaxWidth + 74}px` }
 
     const sidebarRef = useCallback((node) => {
         if (!node) { return }
