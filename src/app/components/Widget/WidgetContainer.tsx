@@ -1,16 +1,13 @@
-import { connect } from 'react-redux'
+import { useAppSelector } from '@store/hooks'
 import React from 'react'
 import Widget from '@components/Widget/Widget'
-import { getExpensesState } from '@store/expenses-store/expensesSelectors'
 import { WidgetProps } from '@components/Widget/WidgetProps'
-import { State } from '@store/redux-store'
 
-const WidgetContainer: React.FC<WidgetProps> = (props) => (
-    <Widget {...props} />
-)
+const WidgetContainer: React.FC<Pick<WidgetProps, 'title'>> = ({ title }) => {
+    const expensesData = useAppSelector((state) => state.expenses)
+    return (
+        <Widget title={title} expenses={expensesData} />
+    )
+}
 
-const mapStateToProps = (state: State) => ({
-    expenses: getExpensesState(state),
-})
-
-export default connect(mapStateToProps)(WidgetContainer)
+export default WidgetContainer
