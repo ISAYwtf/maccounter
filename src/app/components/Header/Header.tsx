@@ -16,7 +16,7 @@ const Header: React.FC = () => (
                 <Logo />
             </div>
             <div>
-                <GreetingContainer userName="User" />
+                <GreetingContainer />
             </div>
         </div>
         <HomePageSwitcher />
