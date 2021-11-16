@@ -16,8 +16,8 @@
     display: block;
     position: relative;
     cursor: pointer;
-    width: 100%;
-    height: 100%;
+    height: var(--height-switch);
+    width: calc(var(--height-switch) * 2);
     transition: 0.2s;
     background-color: var(--color-main);
     box-shadow: inset 0 0 0 1px var(--color-main);
