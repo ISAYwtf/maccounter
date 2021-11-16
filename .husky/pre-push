@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn test:clear --coverage=false
+yarn lint:commited && yarn test:clear --coverage=false

@@ -12,8 +12,10 @@
     "test:coverage": "CI=true craco test --coverage",
     "lint": "tsc --noEmit && eslint --no-error-on-unmatched-pattern 'src/**'",
     "lint:fix": "yarn lint --fix",
-    "lint:staged": "tsc --noEmit && eslint --no-error-on-unmatched-pattern $(git diff --cached --name-only)",
+    "lint:staged": "tsc --noEmit && eslint --no-error-on-unmatched-pattern $(git diff --diff-filter=d --cached --name-only)",
     "lint:staged-fix": "yarn lint:staged --fix",
+    "lint:commited": "tsc --noEmit && eslint --no-error-on-unmatched-pattern $(git diff --diff-filter=d --name-only origin..)",
+    "lint:commited-fix": "yarn lint:commited --fix",
     "prepare": "husky install"
   },
   "browserslist": {
