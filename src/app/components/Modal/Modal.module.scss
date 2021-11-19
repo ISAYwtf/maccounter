@@ -1,0 +1,83 @@
+.container {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-overlay);
+  z-index: 999;
+  transition: 0.2s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  transition: .2s;
+  display: flex;
+  flex-direction: column;
+
+  padding: 60px;
+
+  .header {
+    font-size: var(--size-font-logo);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+      margin-right: 60px;
+    }
+
+    .close {
+      cursor: pointer;
+    }
+  }
+
+  .body {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+
+    .img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid var(--color-main);
+      overflow: hidden;
+      margin-right: 30px;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      font-size: var(--size-font-title-small);
+
+      p:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin-top: 60px;
+    width: 255px;
+    height: 40px;
+    background: var(--color-main);
+    color: var(--color-bg-component);
+
+    transition: .2s;
+    cursor: pointer;
+
+    &:hover {
+      background: #1173B9;
+    }
+  }
+}

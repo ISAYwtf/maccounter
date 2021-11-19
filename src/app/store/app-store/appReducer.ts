@@ -10,6 +10,14 @@ const appReducer = (state = appInitialState, action: AnyAction) => {
                 ...state,
                 timePeriod: action.payload,
             }
+        case appActionTypes.setModalIsActive:
+            return {
+                ...state,
+                modal: {
+                    ...state.modal,
+                    isActive: action.payload,
+                },
+            }
         default:
             return state
     }
@@ -20,6 +28,12 @@ export const setTimePeriod = () => ({
     payload: getCurrentTimePeriod(),
 })
 
+export const setModalIsActive = (payload: boolean) => ({
+    type: appActionTypes.setModalIsActive,
+    payload,
+})
+
 export type SetTimePeriod = typeof setTimePeriod
+export type SetModalIsActive = typeof setModalIsActive
 
 export default appReducer

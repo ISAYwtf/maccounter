@@ -7,6 +7,8 @@ import React, { useCallback, useState } from 'react'
 import clsx from 'clsx'
 import SidebarItem from '@components/Sidebar/SidebarItem'
 import { ReactComponent as expandSvg } from '@icons/expand.svg'
+import { useAppDispatch } from '@store/hooks'
+import { setModalIsActive } from '@store/app-store/appReducer'
 
 // eslint-disable-next-line css-modules/no-unused-class
 import styles from './Sidebar.module.scss'
@@ -41,6 +43,11 @@ const Sidebar: React.FC = () => {
         width: isOpened ? sidebarWidths.max : sidebarWidths.min,
     }
 
+    const dispatch = useAppDispatch()
+    const handleClickToProfile = () => {
+        dispatch(setModalIsActive(true))
+    }
+
     return (
         <div
             className={clsx(
@@ -56,8 +63,10 @@ const Sidebar: React.FC = () => {
             <SidebarItem
                 title="Profile"
                 Ico={undefined}
-                link="/profile"
+                link="/"
+                isLinked={false}
                 isSidebarOpened={isOpened}
+                onClick={handleClickToProfile}
             />
             <SidebarItem
                 title="Home"

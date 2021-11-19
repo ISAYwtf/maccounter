@@ -6,6 +6,7 @@ import ContentPage from '@components/ContentPage/ContentPage'
 import { Provider } from 'react-redux'
 import store from '@store/redux-store'
 import { BrowserRouter } from 'react-router-dom'
+import Modal from '@components/Modal/Modal'
 
 const App: React.FC = () => (
     <BrowserRouter>
@@ -16,6 +17,7 @@ const App: React.FC = () => (
                     <Sidebar />
                     <ContentPage />
                 </section>
+                <Modal />
             </div>
         </Provider>
     </BrowserRouter>
