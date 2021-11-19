@@ -7,7 +7,7 @@ import React, { useCallback, useState } from 'react'
 import clsx from 'clsx'
 import SidebarItem from '@components/Sidebar/SidebarItem'
 import { ReactComponent as expandSvg } from '@icons/expand.svg'
-import { useAppDispatch } from '@store/hooks'
+import { useAppDispatch, useAppSelector } from '@store/hooks'
 import { setModalIsActive } from '@store/app-store/appReducer'
 
 // eslint-disable-next-line css-modules/no-unused-class
@@ -48,6 +48,8 @@ const Sidebar: React.FC = () => {
         dispatch(setModalIsActive(true))
     }
 
+    const links = useAppSelector((state) => state.app.links)
+
     return (
         <div
             className={clsx(
@@ -63,7 +65,6 @@ const Sidebar: React.FC = () => {
             <SidebarItem
                 title="Profile"
                 Ico={undefined}
-                link="/"
                 isLinked={false}
                 isSidebarOpened={isOpened}
                 onClick={handleClickToProfile}
@@ -71,38 +72,37 @@ const Sidebar: React.FC = () => {
             <SidebarItem
                 title="Home"
                 Ico={homeSvg}
-                link="/home"
+                link={links.home}
                 isSidebarOpened={isOpened}
             />
             <SidebarItem
                 title="Accountancy"
                 Ico={accountancySvg}
-                link="/accountancy"
+                link={links.accountancy}
                 isSidebarOpened={isOpened}
             />
             <SidebarItem
                 title="Statistics"
                 Ico={statisticsSvg}
-                link="/statistics"
+                link={links.statistics}
                 isSidebarOpened={isOpened}
             />
             <SidebarItem
                 title="Settings"
                 Ico={settingsSvg}
-                link="/settings"
+                link={links.settings}
                 isSidebarOpened={isOpened}
             />
             <SidebarItem
                 title="Add&nbsp;operation"
                 Ico={addSvg}
-                link="/add-operation"
+                isLinked={false}
                 isSidebarOpened={isOpened}
             />
             <SidebarItem
                 className={styles.expand}
                 title="Expand&nbsp;sidebar"
                 Ico={expandSvg}
-                link="/"
                 isSidebarOpened={isOpened}
                 isLinked={false}
                 onClick={() => setIsOpened(!isOpened)}

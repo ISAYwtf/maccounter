@@ -8,7 +8,7 @@ import styles from './Sidebar.module.scss'
 interface SidebarItemProps extends BasePropsWithoutChild {
     title: string,
     Ico: React.FC | undefined,
-    link: string,
+    link?: string,
     isSidebarOpened: boolean,
     isLinked?: boolean,
 }
@@ -16,7 +16,7 @@ interface SidebarItemProps extends BasePropsWithoutChild {
 const SidebarItem: React.FC<SidebarItemProps> = (({
     title,
     Ico,
-    link,
+    link = '/',
     isSidebarOpened,
     className,
     isLinked,
@@ -49,7 +49,7 @@ const SidebarItem: React.FC<SidebarItemProps> = (({
     return (
         <NavLink
             to={link}
-            activeClassName={styles.active}
+            activeClassName={isLinked ? styles.active : undefined}
             role="link"
             className={clsx(
                 styles.sidebarItem,
@@ -68,6 +68,6 @@ const SidebarItem: React.FC<SidebarItemProps> = (({
     )
 })
 
-SidebarItem.defaultProps = { isLinked: true }
+SidebarItem.defaultProps = { isLinked: true, link: '/' }
 
 export default SidebarItem

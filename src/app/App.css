@@ -1,6 +1,6 @@
 /* Свойства для темных и светлых режимов */
 
-.app[data-mode="light"] {
+.app[data-theme="light"] {
     --color-bg-body: #F5F5F5;
     --color-bg-component: white;
     --color-txt: #313131;

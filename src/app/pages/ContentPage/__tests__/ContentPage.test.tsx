@@ -1,8 +1,8 @@
 import React from 'react'
 import { compareSnapshot } from '@testUtils/renderSnapshot'
-import ContentPage from '@components/ContentPage/ContentPage'
 import { Provider } from 'react-redux'
 import store from '@store/redux-store'
+import ContentPage from '../ContentPage'
 
 describe('ContentPage', () => {
     const renderComponent = <ContentPage />

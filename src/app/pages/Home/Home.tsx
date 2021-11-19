@@ -1,14 +1,14 @@
 import React from 'react'
 import WidgetContainer from '@components/Widget/WidgetContainer'
-import styles from './ContentPage.module.scss'
+import classes from './Home.module.scss'
 
-const ContentPage: React.FC = () => (
-    <main className={styles.container}>
+const Home: React.FC = () => (
+    <div className={classes.container}>
         <WidgetContainer title="Last expenses" />
         <WidgetContainer title="Last expenses" />
         <WidgetContainer title="Last expenses" />
         <WidgetContainer title="Last expenses" />
-    </main>
+    </div>
 )
 
-export default ContentPage
+export default Home

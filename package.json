@@ -34,6 +34,7 @@
     "moduleNameMapper": {
       "\\.(css|less)$": "identity-obj-proxy",
       "^@components(.*)$": "<rootDir>/src/app/components$1",
+      "^@pages(.*)$": "<rootDir>/src/app/pages$1",
       "^@utils(.*)$": "<rootDir>/src/app/utils$1",
       "^@assets(.*)$": "<rootDir>/src/app/assets$1",
       "^@store(.*)$": "<rootDir>/src/app/store$1",
