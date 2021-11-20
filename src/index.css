@@ -6,6 +6,7 @@
   --size-font-title-small: calc(var(--size-font-base) * 1.5);
   --size-font-logo: calc(var(--size-font-base) * 2.25);
   --size-font-side: calc(var(--size-font-base) * 0.75);
+  --size-font-icon: calc(var(--size-font-base) * 0.625);
   --size-border-rad-component: 30px;
   --size-space-between-component: 50px;
   --size-padding-component: 30px;

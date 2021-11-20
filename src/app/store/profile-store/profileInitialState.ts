@@ -1,6 +1,6 @@
 export const INITIAL_STATE = {
-    firstName: 'Iskander',
-    secondName: 'Aydynov',
+    firstName: 'Искандер',
+    secondName: 'Айдынов',
     email: 'example@mail.ru',
     phone: '+79999999999',
 }

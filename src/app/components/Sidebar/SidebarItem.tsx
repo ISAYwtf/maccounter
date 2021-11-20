@@ -7,7 +7,7 @@ import styles from './Sidebar.module.scss'
 
 interface SidebarItemProps extends BasePropsWithoutChild {
     title: string,
-    Ico: React.FC | undefined,
+    Ico: React.FC | string | undefined,
     link?: string,
     isSidebarOpened: boolean,
     isLinked?: boolean,
@@ -60,7 +60,7 @@ const SidebarItem: React.FC<SidebarItemProps> = (({
             onMouseLeave={leaveSidebar}
             onClick={clickHandler}
         >
-            {Ico ? <Ico /> : <span className={styles.sidebarProfile}>IA</span>}
+            {Ico && typeof Ico !== 'string' ? <Ico /> : <span className={styles.sidebarProfile}>{Ico}</span>}
             <div className={styles.prompt}>
                 <p>{title}</p>
             </div>

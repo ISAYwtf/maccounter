@@ -9,6 +9,7 @@ import SidebarItem from '@components/Sidebar/SidebarItem'
 import { ReactComponent as expandSvg } from '@icons/expand.svg'
 import { useAppDispatch, useAppSelector } from '@store/hooks'
 import { setModalIsActive } from '@store/app-store/appReducer'
+import { nameParser } from '@utils/stringParser'
 
 // eslint-disable-next-line css-modules/no-unused-class
 import styles from './Sidebar.module.scss'
@@ -50,6 +51,10 @@ const Sidebar: React.FC = () => {
 
     const links = useAppSelector((state) => state.app.links)
 
+    const userFirstName = useAppSelector((state) => state.profile.firstName)
+    const userSecondName = useAppSelector((state) => state.profile.secondName)
+    const userInitials = nameParser(userFirstName, userSecondName)
+
     return (
         <div
             className={clsx(
@@ -64,7 +69,7 @@ const Sidebar: React.FC = () => {
         >
             <SidebarItem
                 title="Profile"
-                Ico={undefined}
+                Ico={userInitials}
                 isLinked={false}
                 isSidebarOpened={isOpened}
                 onClick={handleClickToProfile}
