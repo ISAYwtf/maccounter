@@ -1,0 +1,20 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin-top: 60px;
+  width: 255px;
+  height: 40px;
+  background: var(--color-main);
+  color: var(--color-bg-component);
+  border: none;
+  border-radius: var(--size-border-rad-component);
+
+  transition: .2s;
+  cursor: pointer;
+
+  &:hover {
+    background: #1173B9;
+  }
+}

@@ -1,3 +1,4 @@
+import Button from '@components/Button/Button'
 import React from 'react'
 import { useAppDispatch, useAppSelector } from '@store/hooks'
 import clsx from 'clsx'
@@ -39,7 +40,7 @@ const Modal: React.FC = () => {
                         <p>{phoneParser(profile.phone)}</p>
                     </div>
                 </div>
-                <div className={classes.button}>Edit</div>
+                <Button>Edit</Button>
             </div>
         </div>
     )
