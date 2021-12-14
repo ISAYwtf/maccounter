@@ -1,9 +1,9 @@
-import { MouseEventHandler } from 'react'
+import { MouseEventHandler, ReactChild, ReactChildren } from 'react'
 import { Omit } from 'react-redux'
 
 export interface BaseProps {
     className?: string,
-    children?: JSX.Element | JSX.Element[],
+    children?: ReactChildren | ReactChild | JSX.Element | JSX.Element[],
     onClick?: MouseEventHandler,
 }
 
