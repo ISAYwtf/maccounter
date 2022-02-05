@@ -5,9 +5,18 @@
     --color-bg-component: white;
     --color-txt: #313131;
     --color-main: #0E91EE;
+    --color-main-hover: #3AADFF;
+    --color-main-press: #0D81D3;
+    --color-secondary: #777777;
+    --color-secondary-hover: #939393;
+    --color-secondary-press: #494949;
     --color-addition-access: #00F083;
-    --color-addition-warn: #FF9000;
-    --color-addition-err: #FF4500;
+    --color-warning: #F28C07;
+    --color-warning-hover: #FFA837;
+    --color-warning-press: #E28710;
+    --color-error: #EA3434;
+    --color-error-hover: #F15050;
+    --color-error-press: #C22727;
     --color-disable: #E5E5E5;
     --color-side: #AEAEAE;
     --color-overlay: rgba(255, 255, 255, 0.7);
@@ -36,7 +45,7 @@ span {
 }
 
 .txt--orange {
-    color: var(--color-addition-warn);
+    color: var(--color-warning);
 }
 
 .txt--logo {

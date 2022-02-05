@@ -7,7 +7,7 @@ import React, { useCallback, useState } from 'react'
 import clsx from 'clsx'
 import SidebarItem from '@components/Sidebar/SidebarItem'
 import { ReactComponent as expandSvg } from '@icons/expand.svg'
-import { useAppDispatch, useAppSelector } from '@store/hooks'
+import { useSelector, useDispatch } from '@store/hooks'
 import { setModalIsActive } from '@store/app-store/appReducer'
 import { nameParser } from '@utils/stringParser'
 
@@ -44,15 +44,15 @@ const Sidebar: React.FC = () => {
         width: isOpened ? sidebarWidths.max : sidebarWidths.min,
     }
 
-    const dispatch = useAppDispatch()
+    const dispatch = useDispatch()
     const handleClickToProfile = () => {
         dispatch(setModalIsActive(true))
     }
 
-    const links = useAppSelector((state) => state.app.links)
+    const links = useSelector((state) => state.app.links)
 
-    const userFirstName = useAppSelector((state) => state.profile.firstName)
-    const userSecondName = useAppSelector((state) => state.profile.secondName)
+    const userFirstName = useSelector((state) => state.profile.firstName)
+    const userSecondName = useSelector((state) => state.profile.secondName)
     const userInitials = nameParser(userFirstName, userSecondName)
 
     return (

@@ -29,6 +29,7 @@ describe('Sidebar', () => {
         expect(setTimeout).toHaveBeenCalledTimes(1)
         expect(setTimeout).toHaveBeenCalledWith(expect.any(Function), 1000)
         fireEvent.mouseLeave(sidebarItem)
+        jest.useRealTimers()
     })
 
     it('dbClick should open sidebar', () => {

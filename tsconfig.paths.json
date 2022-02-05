@@ -4,6 +4,8 @@
     "paths": {
       "@utils/*": ["app/utils/*"],
       "@components/*": ["app/components/*"],
+      "@kit": ["app/kit"],
+      "@kit/*": ["app/kit/*"],
       "@pages/*": ["app/pages/*"],
       "@localTypes/*": ["app/types/*"],
       "@assets/*": ["app/assets/*"],

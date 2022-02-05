@@ -1,50 +1,51 @@
-import Button from '@components/Button/Button'
-import React from 'react'
-import { useAppDispatch, useAppSelector } from '@store/hooks'
-import clsx from 'clsx'
-import { showComponentIf } from '@utils/showIf'
-import { ReactComponent as CloseSvg } from '@icons/close.svg'
-import { setModalIsActive } from '@store/app-store/appReducer'
 import { space } from '@assets/symbols'
+import { ReactComponent as CloseSvg } from '@icons/close.svg'
+import { BRANDS, SIZES } from '@localTypes/Enums'
+import { setModalIsActive } from '@store/app-store/appReducer'
+import { useDispatch, useSelector } from '@store/hooks'
 import { phoneParser } from '@utils/stringParser'
+import clsx from 'clsx'
+import { FC } from 'react'
+import { Button, If } from '@kit';
 import classes from './Modal.module.scss'
 
-const Modal: React.FC = () => {
-    const isActive = useAppSelector((state) => state.app.modal.isActive)
-    const profile = useAppSelector((state) => state.profile)
-    const dispatch = useAppDispatch()
+const Modal: FC = () => {
+    const isActive = useSelector((state) => state.app.modal.isActive)
+    const profile = useSelector((state) => state.profile)
+    const dispatch = useDispatch()
     const close = () => {
         dispatch(setModalIsActive(false))
     }
 
-    const mainComponent = (
-        <div className={classes.container}>
-            <div className={clsx(
-                'component',
-                classes.modal,
-            )}
-            >
-                <header className={classes.header}>
-                    <div className={classes.title}>Profile</div>
-                    <div className={classes.close} onClick={close}><CloseSvg /></div>
-                </header>
-                <div className={classes.body}>
-                    <div className={classes.img}>img</div>
-                    <div className={classes.info}>
-                        <p>
-                            {profile.firstName}
-                            {space}
-                            {profile.secondName}
-                        </p>
-                        <p>{profile.email}</p>
-                        <p>{phoneParser(profile.phone)}</p>
+    return (
+        <If condition={isActive}>
+            <div className={classes.container}>
+                <div className={clsx(
+                    'component',
+                    classes.modal,
+                )}
+                >
+                    <header className={classes.header}>
+                        <div className={classes.title}>Profile</div>
+                        <div className={classes.close} onClick={close}><CloseSvg /></div>
+                    </header>
+                    <div className={classes.body}>
+                        <div className={classes.img}>img</div>
+                        <div className={classes.info}>
+                            <p>
+                                {profile.firstName}
+                                {space}
+                                {profile.secondName}
+                            </p>
+                            <p>{profile.email}</p>
+                            <p>{phoneParser(profile.phone)}</p>
+                        </div>
                     </div>
+                    <Button type={BRANDS.primary} size={SIZES.small}>Edit</Button>
                 </div>
-                <Button>Edit</Button>
             </div>
-        </div>
+        </If>
     )
-    return showComponentIf(isActive, mainComponent)
 }
 
 export default Modal
