@@ -6,7 +6,6 @@
   margin-top: 60px;
   width: 255px;
   height: 40px;
-  background: var(--color-main);
   color: var(--color-bg-component);
   border: none;
   border-radius: var(--size-border-rad-component);
@@ -14,7 +13,64 @@
   transition: .2s;
   cursor: pointer;
 
-  &:hover {
-    background: #1173B9;
+  &:focus-visible:not(.disabled) {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-txt);
   }
 }
+
+// TYPES
+.primary {
+  background: var(--color-main);
+
+  &:hover {
+    background: var(--color-main-hover);
+  }
+
+  &:active {
+    background: var(--color-main-press);
+  }
+}
+.secondary {
+  background: var(--color-secondary);
+
+  &:hover {
+    background: var(--color-secondary-hover);
+  }
+
+  &:active {
+    background: var(--color-secondary-press);
+  }
+}
+.critical {
+  background: var(--color-error);
+
+  &:hover {
+    background: var(--color-error-hover);
+  }
+
+  &:active {
+    background: var(--color-error-press);
+  }
+}
+.warning {
+  background: var(--color-warning);
+}
+
+.disabled, .disabled:hover, .disabled:active {
+  background-color: var(--color-disable);
+  cursor: default;
+}
+
+// SIZES
+.xSmall {
+  padding: 9px 30px;
+  height: 32px;
+  font-size: var(--size-font-side);
+}
+.small {
+  padding: 10px 30px;
+}
+.medium {}
+.large {}
+.xLarge {}

@@ -1,18 +1,19 @@
-import Button from '@components/Button/Button'
-import React from 'react'
-import { useAppDispatch, useAppSelector } from '@store/hooks'
-import clsx from 'clsx'
-import { showComponentIf } from '@utils/showIf'
-import { ReactComponent as CloseSvg } from '@icons/close.svg'
-import { setModalIsActive } from '@store/app-store/appReducer'
 import { space } from '@assets/symbols'
+import Button from '@components/Button/Button'
+import { ReactComponent as CloseSvg } from '@icons/close.svg'
+import { BRANDS, SIZES } from '@localTypes/Enums'
+import { setModalIsActive } from '@store/app-store/appReducer'
+import { useDispatch, useSelector } from '@store/hooks'
+import { showComponentIf } from '@utils/showIf'
 import { phoneParser } from '@utils/stringParser'
+import clsx from 'clsx'
+import React from 'react'
 import classes from './Modal.module.scss'
 
 const Modal: React.FC = () => {
-    const isActive = useAppSelector((state) => state.app.modal.isActive)
-    const profile = useAppSelector((state) => state.profile)
-    const dispatch = useAppDispatch()
+    const isActive = useSelector((state) => state.app.modal.isActive)
+    const profile = useSelector((state) => state.profile)
+    const dispatch = useDispatch()
     const close = () => {
         dispatch(setModalIsActive(false))
     }
@@ -40,7 +41,7 @@ const Modal: React.FC = () => {
                         <p>{phoneParser(profile.phone)}</p>
                     </div>
                 </div>
-                <Button>Edit</Button>
+                <Button type={BRANDS.primary} size={SIZES.small}>Edit</Button>
             </div>
         </div>
     )
