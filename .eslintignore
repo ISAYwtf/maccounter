@@ -1,4 +1,6 @@
-packages/**/build
+**/build
+
+.eslintrc.js
 
 *.svg
 *.otf

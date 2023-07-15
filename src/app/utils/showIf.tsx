@@ -1,3 +1,3 @@
-import React, { ReactElement } from 'react'
+import React, { Fragment, ReactElement } from 'react'
 
-export const showComponentIf = (condition: boolean, component: ReactElement) => (condition ? component : <></>)
+export const showComponentIf = (condition: boolean, component: ReactElement) => (condition ? component : <Fragment />)

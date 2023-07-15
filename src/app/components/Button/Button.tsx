@@ -7,7 +7,7 @@ interface ButtonProps extends BaseProps {
     ref?: Ref<HTMLButtonElement>
 }
 
-const Button: React.FC<ButtonProps> = React.forwardRef(({ children, ...props }, ref) => (
+const Button: React.FC<ButtonProps> = React.forwardRef(({ children }, ref) => (
     <button
         type="button"
         ref={ref}

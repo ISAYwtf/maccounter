@@ -5,10 +5,11 @@ import { fireEvent, render, screen } from '@testing-library/react'
 import { Provider } from 'react-redux'
 import store from '@store/redux-store'
 import { BrowserRouter } from 'react-router-dom'
+import { WithChildren } from '@localTypes/BaseProps'
 
 describe('Sidebar', () => {
     const renderComponent = <Sidebar />
-    const wrapper: React.FC = ({ children }) => (
+    const wrapper: React.FC<WithChildren> = ({ children }) => (
         <BrowserRouter>
             <Provider store={store}>
                 {children}

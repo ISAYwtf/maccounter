@@ -3,19 +3,20 @@ import { getCurrentTimePeriod } from '@store/app-store/utils'
 import { AnyAction } from 'redux'
 import { appActionTypes } from '@store/app-store/actionTypes'
 
-const appReducer = (state = appInitialState, action: AnyAction) => {
-    switch (action.type) {
+// eslint-disable-next-line default-param-last
+const appReducer = (state = appInitialState, action?: AnyAction) => {
+    switch (action?.type) {
         case appActionTypes.setTimePeriod:
             return {
                 ...state,
-                timePeriod: action.payload,
+                timePeriod: action?.payload,
             }
         case appActionTypes.setModalIsActive:
             return {
                 ...state,
                 modal: {
                     ...state.modal,
-                    isActive: action.payload,
+                    isActive: action?.payload,
                 },
             }
         default:

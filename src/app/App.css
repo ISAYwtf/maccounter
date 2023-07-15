@@ -21,6 +21,8 @@
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Общие свойства */
@@ -59,4 +61,5 @@ span {
     display: flex;
     padding-top: 20px;
     padding-bottom: 0;
+    flex-grow: 1;
 }

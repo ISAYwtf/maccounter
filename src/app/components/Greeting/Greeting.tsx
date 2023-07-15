@@ -4,8 +4,8 @@ import React from 'react'
 // import styles from './Greeting.module.css'
 
 export interface GreetingProps {
-    userName: string,
-    timePeriod: string,
+    userName: string
+    timePeriod: string
 }
 
 const Greeting: React.FC<GreetingProps> = ({ userName, timePeriod }) => (

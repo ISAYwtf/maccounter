@@ -2,15 +2,14 @@ import { BasePropsWithoutChild } from '@localTypes/BaseProps'
 import React, { MouseEventHandler, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import clsx from 'clsx'
-// eslint-disable-next-line css-modules/no-unused-class
 import styles from './Sidebar.module.scss'
 
 interface SidebarItemProps extends BasePropsWithoutChild {
-    title: string,
-    Ico: React.FC | string | undefined,
-    link?: string,
-    isSidebarOpened: boolean,
-    isLinked?: boolean,
+    title: string
+    Ico: React.FC | string | undefined
+    link?: string
+    isSidebarOpened: boolean
+    isLinked?: boolean
 }
 
 const SidebarItem: React.FC<SidebarItemProps> = (({

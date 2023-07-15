@@ -26,14 +26,14 @@ const Sidebar: React.FC = () => {
 
     const sidebarWidths = { min: 64, max: `${sidebarItemsMaxWidth + 74}px` }
 
-    const sidebarRef = useCallback((node) => {
+    const sidebarRef = useCallback((node: HTMLDivElement) => {
         if (!node) { return }
 
         setSidebarHeight(node.getBoundingClientRect().height)
         const sidebarItems = node.querySelectorAll(`.${styles.prompt}`)
         const widths: number[] = []
 
-        sidebarItems.forEach((item: HTMLElement) => {
+        sidebarItems.forEach((item: Element) => {
             widths.push(item.getBoundingClientRect().width)
         })
         setSidebarItemsWidth(widths)

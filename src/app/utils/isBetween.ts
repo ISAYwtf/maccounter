@@ -1,7 +1,7 @@
 interface Between {
-    value: number,
-    min: number,
-    max: number,
+    value: number
+    min: number
+    max: number
     isStrict?: boolean
 }
 
